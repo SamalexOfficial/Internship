@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: url('./Hero.jpeg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      z-index: 10;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ccc;
+    }
+
+    .hero-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-family: 'Anton', sans-serif;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-subtext {
+      font-size: 1.1rem;
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      color: #ddd;
+    }
+    .about-section {
+  padding: 6rem 2rem;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-image {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem; /* increased size */
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 4px; /* adds space between letters */
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 500px;
+}
+.section-label {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.about-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.about-link:hover {
+  border-color: white;
+}
+
+.projects-section {
+  background-color: white;
+  color: #0f0f0f;
+  padding: 6rem 2rem;
+  position: relative;
+  text-align: center;
+  width: 100%; /* ensures full-width */
+}
+
+.projects-header {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-label-left,
+.projects-label-right {
+  position: absolute;
+  top: 0;
+  font-style: italic;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.projects-label-left {
+  left: 0rem;
+  text-align: left;
+}
+
+.projects-label-right {
+  right: 2rem;
+}
+
+.projects-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 10rem;
+  margin: 2rem 0 1rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.projects-subtext {
+  font-size: 3rem;
+  line-height: 1.3;
+  color: #222;
+  max-width: 800px;
+  margin: 0;
+  text-align: left;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 2rem 0;
+}
+.project-item {
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.project-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+  padding: 0 0.5rem;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  text-align: left;
+}
+
+.project-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  text-align: right;
+}
+.project-name {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  transition: border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.project-name:hover {
+  border-bottom: 2px solid #111;
+}
+.services-section {
+  background-color: white;
+  color: #0f0f0f;
+  padding: 6rem 2rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.section-labels {
+  position: relative;
+}
+
+.label-left,
+.label-right {
+  position: absolute;
+  top: 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: gray;
+}
+
+.label-left {
+  left: 0rem;
+}
+
+.label-right {
+  right: 2rem;
+}
+
+.services-heading h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.services-heading p {
+  font-size: 3rem;
+  max-width: 800px;
+  margin: 0;
+  line-height: 1.3;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <nav class="navbar">
+      <a href="#about">About Us</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Clients</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero-center">
+      <div class="hero-title">SAM STUDIO</div>
+      <div class="hero-subtext">
+        Crafting impactful brands and websites that drive growth and success
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+<section id="about" class="about-section">
+    <div class="about-container">
+  
+      <!-- Left: Image -->
+      <div class="about-image">
+        <img src="./about.png" alt="About Sam Studio" />
+      </div>
+  
+      <!-- Right: Text -->
+      <div class="about-text">
+        <span class="section-label">(About Us)</span>
+        <h2>CREATIVE<br>BRANDS,<br>POWERFUL<br>WEBSITES</h2>
+        <p>
+          We are passionate about creating meaningful brands and dynamic websites that stand out in today’s competitive market. Our team combines strategic thinking with creative design to craft custom solutions that align with your business goals.
+        </p>
+        <p>
+          With every project, we ensure that your brand’s story is told in a way that resonates with your audience, builds trust, and drives growth. Let us help you transform your brand and take your digital presence to the next level.
+        </p>
+        <a href="#about" class="about-link">More About Us</a>
+      </div>
+      
+      <section id="projects" class="projects-section">
+        <div class="projects-header">
+          <div class="projects-label-left">(Selected Work)</div>
+          <div class="projects-label-right">(01)</div>
+          <h2 class="projects-title">PROJECTS</h2>
+          <p class="projects-subtext">
+            Explore our recent projects showcasing creativity, innovation, and impactful design solutions.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-item">
+            <img src="./1.jpg" alt="Project One">
+            <div class="project-info">
+              <a href="#" class="project-name">Project 1</a>
+              <p>2024</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="./1.jpg" alt="Project Two">
+            <div class="project-info">
+              <a href="#" class="project-name">Project 2</a>
+              <p>2023</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="./1.jpg" alt="Project Three">
+            <div class="project-info">
+              <a href="#" class="project-name">Project 3</a>
+              <p>2021</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="./1.jpg" alt="Project Four">
+            <div class="project-info">
+              <a href="#" class="project-name">Project 4</a>
+              <p>2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services-section">
+        <div class="section-labels">
+          <span class="label-left">(What we do)</span>
+          <span class="label-right">(02)</span>
+        </div>
+        <div class="services-heading">
+          <h2>SERVICES</h2>
+          <p>
+            Discover our tailored services designed to elevate your brand, enhance user experience.
+          </p>
+        </div>
+      </section>
+
+  
+    </div>
+  </section>
+</body>
+</html>

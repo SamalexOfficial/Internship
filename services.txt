@@ -1,166 +1,656 @@
-<section class="services-section" id="services">
-      <section class="services-section">
-        <div class="section-header">
-          <span class="section-label">(What we do)</span>
-          <span class="section-number">(02)</span>
-          <h1>SERVICES</h1>
-          <p class="section-subtext">
-            Discover our tailored services designed to elevate your brand and enhance user experience.
-          </p>
-        </div>
-      
-        <!-- Block 1: Image left, text right -->
-        <div class="service-block">
-          <div class="service-img">
-            <img src="./brand.jpeg" alt="Branding Strategy" />
-          </div>
-          <div class="service-text">
-            <h2>BRANDING STRATEGY</h2>
-            <p class="service-desc">Strong & cohesive brand identity to connect with your audience.</p>
-            <p class="service-label">(Branding Services)</p>
-            <ul class="service-list">
-              <li>Brand Discovery</li>
-              <li>Visual Identity</li>
-              <li>Brand Guidelines</li>
-            </ul>
-          </div>
-        </div>
-      
-        <!-- Block 2: Image right, text left -->
-        <div class="service-block reverse">
-          <div class="service-img">
-            <img src="./brand.jpeg" alt="Web Design" />
-          </div>
-          <div class="service-text">
-            <h2>WEB DESIGN</h2>
-            <p class="service-desc">Modern interfaces built for performance and engagement.</p>
-            <p class="service-label">(Digital Design)</p>
-            <ul class="service-list">
-              <li>UI/UX Design</li>
-              <li>Responsive Layouts</li>
-              <li>Interaction Design</li>
-            </ul>
-          </div>
-        </div>
-      
-        <!-- Block 3: Image left, text right -->
-        <div class="service-block">
-          <div class="service-img">
-            <img src="./brand.jpeg" alt="Marketing Strategy" />
-          </div>
-          <div class="service-text">
-            <h2>MARKETING STRATEGY</h2>
-            <p class="service-desc">Grow your brand’s visibility and trust with data-backed marketing.</p>
-            <p class="service-label">(Growth Services)</p>
-            <ul class="service-list">
-              <li>SEO & Analytics</li>
-              <li>Content Strategy</li>
-              <li>Campaign Planning</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: url('./Hero.jpeg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      z-index: 10;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ccc;
+    }
+
+    .hero-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-family: 'Anton', sans-serif;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-subtext {
+      font-size: 1.1rem;
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      color: #ddd;
+    }
+    .about-section {
+      padding: 6rem 2rem;
+      background-color: #0f0f0f;
+      color: white;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .about-image {
+      flex: 1 1 45%;
+      min-width: 300px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .about-text {
+      flex: 1 1 45%;
+      min-width: 300px;
+    }
+
+    .about-text h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 4rem; /* increased size */
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 4px; /* adds space between letters */
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+    .section-label {
+      font-style: italic;
+      color: #888;
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .about-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .about-link:hover {
+      border-color: white;
+    }
+
+    .projects-section {
+      background-color: white;
+      color: #0f0f0f;
+      padding: 6rem 2rem;
+      position: relative;
+      text-align: center;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .projects-header {
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .projects-label-left,
+    .projects-label-right {
+      position: absolute;
+      top: 0;
+      font-style: italic;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .projects-label-left {
+      left: 0rem;
+      text-align: left;
+    }
+
+    .projects-label-right {
+      right: 2rem;
+    }
+
+    .projects-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 10rem;
+      margin: 2rem 0 1rem;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .projects-subtext {
+      font-size: 3rem;
+      line-height: 1.3;
+      color: #222;
+      max-width: 800px;
+      margin: 0;
+      text-align: left;
+    }
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 4rem;
+      gap: 2rem 0;
+    }
+    .project-item {
+      width: 50%;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .project-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .project-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.8rem;
+      padding: 0 0.5rem;
+    }
+
+    .project-info h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #111;
+      text-align: left;
+    }
+
+    .project-info p {
+      margin: 0;
+      color: #666;
+      font-size: 0.95rem;
+      text-align: right;
+    }
+    .project-name {
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #111;
+      transition: border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .project-name:hover {
+      border-bottom: 2px solid #111;
+    }
+
+    .services-section {
+      background: white;
+      padding: 6rem 2rem;
+      color: #111;
+    }
+
+    .services-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .services-header {
+      position: relative;
+      margin-bottom: 5rem;
+    }
+
+    .services-label,
+    .services-number {
+      font-style: italic;
+      color: gray;
+      font-size: 1rem;
+      position: absolute;
+      top: 0;
+    }
+
+    .services-label {
+      left: 0;
+    }
+
+    .services-number {
+      right: 0;
+    }
+
+    .services-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 10rem;
+      margin: 2rem 0 1rem;
+      text-transform: uppercase;
+    }
+
+    .services-subtext {
+      font-size: 3rem;
+      max-width: 722px;
+      line-height: 1.4;
+    }
+
+    .service-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6rem;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .service-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .service-block:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+    .service-block:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
+    .service-block:nth-of-type(4) {
+      animation-delay: 0.6s;
+    }
+
+    .service-image,
+    .service-text {
+      width: 48%;
+    }
+
+    .service-image img {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .service-text h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-text p {
+      font-size: 2rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .service-text ul {
+      list-style: none;
+      padding: 0;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #111;
+    }
+
+    .service-text ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .testimonials-section {
+      background-color: #fff;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonials-header {
+      max-width: 800px;
+      margin: 0 auto 4rem auto;
+      position: relative;
+    }
+
+    .section-label {
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      font-style: italic;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .section-number {
+      position: absolute;
+      top: -2rem;
+      right: 0;
+      font-style: italic;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .testimonials-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 10rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: #000;
+    }
+
+    .testimonials-subtext {
+      font-size: 1.8rem;
+      color: #444;
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Scrollable Container */
+    .testimonials-scroll {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      padding: 2rem 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonials-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Individual Testimonial */
+    .testimonial {
+      flex: 0 0 80%;
+      max-width: 500px;
+      background: #f5f5f5;
+      padding: 2rem;
+      border-radius: 1rem;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .testimonial img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial h3 {
+      margin: 0.5rem 0;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #111;
+    }
+
+    .testimonial p {
+      font-size: 1.1rem;
+      color: #333;
+      font-style: italic;
+      line-height: 1.6;
+      max-width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <nav class="navbar">
+      <a href="#about">About Us</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Clients</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero-center">
+      <div class="hero-title">SAM STUDIO</div>
+      <div class="hero-subtext">
+        Crafting impactful brands and websites that drive growth and success
+      </div>
     </div>
+  </section>
 
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <!-- Left: Image -->
+      <div class="about-image">
+        <img src="./about.png" alt="About Sam Studio" />
+      </div>
+  
+      <!-- Right: Text -->
+      <div class="about-text">
+        <span class="section-label">(About Us)</span>
+        <h2>CREATIVE<br>BRANDS,<br>POWERFUL<br>WEBSITES</h2>
+        <p>
+          We are passionate about creating meaningful brands and dynamic websites that stand out in today's competitive market. Our team combines strategic thinking with creative design to craft custom solutions that align with your business goals.
+        </p>
+        <p>
+          With every project, we ensure that your brand's story is told in a way that resonates with your audience, builds trust, and drives growth. Let us help you transform your brand and take your digital presence to the next level.
+        </p>
+        <a href="#about" class="about-link">More About Us</a>
+      </div>
+    </div>
+  </section>
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="projects-container">
+      <div class="projects-header">
+        <div class="projects-label-left">(Selected Work)</div>
+        <div class="projects-label-right">(01)</div>
+        <h2 class="projects-title">PROJECTS</h2>
+        <p class="projects-subtext">
+          Explore our recent projects showcasing creativity, innovation, and impactful design solutions.
+        </p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-item">
+          <img src="./1.jpg" alt="Project One">
+          <div class="project-info">
+            <a href="#" class="project-name">Project 1</a>
+            <p>2024</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="./1.jpg" alt="Project Two">
+          <div class="project-info">
+            <a href="#" class="project-name">Project 2</a>
+            <p>2023</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="./1.jpg" alt="Project Three">
+          <div class="project-info">
+            <a href="#" class="project-name">Project 3</a>
+            <p>2021</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="./1.jpg" alt="Project Four">
+          <div class="project-info">
+            <a href="#" class="project-name">Project 4</a>
+            <p>2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.services-section {
-  background-color: #ffffff;
-  padding: 40px 40px;
-  font-family: 'Helvetica Neue', sans-serif;
-  max-width: 1300px;
-  margin: 0 auto;
-}
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="services-container">
+      <div class="services-header">
+        <div class="services-label">(What we do)</div>
+        <div class="services-number">(02)</div>
+        <h2 class="services-title">SERVICES</h2>
+        <p class="services-subtext">
+          Discover our tailored services designed to elevate your brand, enhance user experience.
+        </p>
+      </div>
+    
+      <!-- Service Block 1: Image Left, Text Right -->
+      <div class="service-block fade-in-left">
+        <div class="service-image">
+          <img src="./about.png" alt="Brand Strategy">
+        </div>
+        <div class="service-text">
+          <h3>BRANDING STRATEGY</h3>
+          <p>Strong & cohesive brand identity to connect with your audience.</p>
+          <ul>
+            <li>Brand Discovery</li>
+            <li>Visual Identity</li>
+            <li>Brand Guidelines</li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Service Block 2: Image Right, Text Left -->
+      <div class="service-block fade-in-right reverse">
+        <div class="service-image">
+          <img src="./about.png" alt="Web Design">
+        </div>
+        <div class="service-text">
+          <h3>WEB DESIGN</h3>
+          <p>Modern interfaces built for performance and engagement.</p>
+          <ul>
+            <li>UI/UX Design</li>
+            <li>Responsive Layouts</li>
+            <li>Interaction Design</li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Service Block 3: Image Left, Text Right -->
+      <div class="service-block fade-in-left">
+        <div class="service-image">
+          <img src="about.png" alt="Marketing Strategy">
+        </div>
+        <div class="service-text">
+          <h3>MARKETING STRATEGY</h3>
+          <p>Grow your brand's visibility and trust with data-backed marketing.</p>
+          <ul>
+            <li>SEO & Analytics</li>
+            <li>Content Strategy</li>
+            <li>Campaign Planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.section-header {
-  position: relative;
-  margin-bottom: 80px;
-}
-
-.section-label {
-  font-style: italic;
-  color: gray;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.section-number {
-  font-style: italic;
-  color: gray;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.section-header h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 10rem;
-  color: #000;
-  text-transform: uppercase;
-  margin: 40px 0 10px;
-}
-
-.section-subtext {
-  font-size: 3rem;
-  font-weight: 400;
-  color: #222;
-  max-width: 700px;
-  line-height: 1.5;
-}
-
-.service-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 100px;
-}
-
-.service-block.reverse {
-  flex-direction: row-reverse;
-}
-
-.service-img,
-.service-text {
-  width: 50%;
-  padding: 20px;
-}
-
-.service-img img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-}
-
-.service-text h2 {
-  font-family: 'Anton', sans-serif;
-  font-size: 48px;
-  color: #000;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.service-desc {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.service-label {
-  font-style: italic;
-  color: gray;
-  margin-bottom: 15px;
-}
-
-.service-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  font-size: 18px;
-  font-weight: 600;
-  color: #000;
-}
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="testimonials-container">
+      <div class="testimonials-header">
+        <span class="section-label">(Testimonials)</span>
+        <span class="section-number">(03)</span>
+        <h1 class="testimonials-title">WHAT OUR CLIENTS SAY</h1>
+        <p class="testimonials-subtext">
+          Hear our clients about their success stories and experiences with us.
+        </p>
+      </div>
+    
+      <div class="testimonials-scroll">
+        <div class="testimonial">
+          <img src="t1.jpg" alt="Client 1">
+          <h3>John Doe</h3>
+          <p>❝ The team at Sam Studio exceeded our expectations. Brilliant work and communication. ❞</p>
+        </div>
+        <div class="testimonial">
+          <img src="t2.jpg" alt="Client 2">
+          <h3>Jane Smith</h3>
+          <p>❝ Their creativity and strategy helped elevate our brand to new heights. ❞</p>
+        </div>
+        <div class="testimonial">
+          <img src="t3.jpg" alt="Client 3">
+          <h3>Rahul Verma</h3>
+          <p>❝ Truly a fantastic team. We saw results almost immediately. ❞</p>
+        </div>
+        <div class="testimonial">
+          <img src="t1.jpg" alt="Client 4">
+          <h3>Emily Zhang</h3>
+          <p>❝ Professional, punctual, and creative — highly recommended! ❞</p>
+        </div>
+        <div class="testimonial">
+          <img src="t2.jpg" alt="Client 5">
+          <h3>Ali Khan</h3>
+          <p>❝ A pleasure to work with. Their design sense is on point. ❞</p>
+        </div>
+        <div class="testimonial">
+          <img src="t3.jpg" alt="Client 6">
+          <h3>Sara Lopez</h3>
+          <p>❝ Helped us redefine our digital presence with class and confidence. ❞</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

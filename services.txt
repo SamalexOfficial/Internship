@@ -1,0 +1,166 @@
+<section class="services-section" id="services">
+      <section class="services-section">
+        <div class="section-header">
+          <span class="section-label">(What we do)</span>
+          <span class="section-number">(02)</span>
+          <h1>SERVICES</h1>
+          <p class="section-subtext">
+            Discover our tailored services designed to elevate your brand and enhance user experience.
+          </p>
+        </div>
+      
+        <!-- Block 1: Image left, text right -->
+        <div class="service-block">
+          <div class="service-img">
+            <img src="./brand.jpeg" alt="Branding Strategy" />
+          </div>
+          <div class="service-text">
+            <h2>BRANDING STRATEGY</h2>
+            <p class="service-desc">Strong & cohesive brand identity to connect with your audience.</p>
+            <p class="service-label">(Branding Services)</p>
+            <ul class="service-list">
+              <li>Brand Discovery</li>
+              <li>Visual Identity</li>
+              <li>Brand Guidelines</li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Block 2: Image right, text left -->
+        <div class="service-block reverse">
+          <div class="service-img">
+            <img src="./brand.jpeg" alt="Web Design" />
+          </div>
+          <div class="service-text">
+            <h2>WEB DESIGN</h2>
+            <p class="service-desc">Modern interfaces built for performance and engagement.</p>
+            <p class="service-label">(Digital Design)</p>
+            <ul class="service-list">
+              <li>UI/UX Design</li>
+              <li>Responsive Layouts</li>
+              <li>Interaction Design</li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Block 3: Image left, text right -->
+        <div class="service-block">
+          <div class="service-img">
+            <img src="./brand.jpeg" alt="Marketing Strategy" />
+          </div>
+          <div class="service-text">
+            <h2>MARKETING STRATEGY</h2>
+            <p class="service-desc">Grow your brand’s visibility and trust with data-backed marketing.</p>
+            <p class="service-label">(Growth Services)</p>
+            <ul class="service-list">
+              <li>SEO & Analytics</li>
+              <li>Content Strategy</li>
+              <li>Campaign Planning</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+        
+    </div>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.services-section {
+  background-color: #ffffff;
+  padding: 40px 40px;
+  font-family: 'Helvetica Neue', sans-serif;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.section-label {
+  font-style: italic;
+  color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section-number {
+  font-style: italic;
+  color: gray;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.section-header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 10rem;
+  color: #000;
+  text-transform: uppercase;
+  margin: 40px 0 10px;
+}
+
+.section-subtext {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #222;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.service-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.service-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-img,
+.service-text {
+  width: 50%;
+  padding: 20px;
+}
+
+.service-img img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.service-text h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 48px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.service-desc {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-label {
+  font-style: italic;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}

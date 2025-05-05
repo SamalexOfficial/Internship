@@ -1,0 +1,641 @@
+<!-- Service Block 1: Image Left, Text Right -->
+      <div class="service-block fade-in-left">
+        <div class="service-image">
+          <img src="./about.png" alt="Brand Strategy">
+        </div>
+        <div class="service-text">
+          <h3>BRANDING STRATEGY</h3>
+          <p>Strong & cohesive brand identity to connect with your audience.</p>
+          <ul>
+            <li>Brand Discovery</li>
+            <li>Visual Identity</li>
+            <li>Brand Guidelines</li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Service Block 2: Image Right, Text Left -->
+      <div class="service-block fade-in-right reverse">
+        <div class="service-image">
+          <img src="./about.png" alt="Web Design">
+        </div>
+        <div class="service-text">
+          <h3>WEB DESIGN</h3>
+          <p>Modern interfaces built for performance and engagement.</p>
+          <ul>
+            <li>UI/UX Design</li>
+            <li>Responsive Layouts</li>
+            <li>Interaction Design</li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Service Block 3: Image Left, Text Right -->
+      <div class="service-block fade-in-left">
+        <div class="service-image">
+          <img src="about.png" alt="Marketing Strategy">
+        </div>
+        <div class="service-text">
+          <h3>MARKETING STRATEGY</h3>
+          <p>Grow your brand's visibility and trust with data-backed marketing.</p>
+          <ul>
+            <li>SEO & Analytics</li>
+            <li>Content Strategy</li>
+            <li>Campaign Planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="testimonials">
+    <div class="testimonials-header">
+      <span class="section-label">(Testimonials)</span>
+      <span class="section-number">(03)</span>
+      <h1 class="testimonials-title">WHAT OUR CLIENTS SAY</h1>
+      <p class="testimonials-subtext">
+        Hear our clients about their success stories and experiences with us.
+      </p>
+    </div>
+  
+    <div class="testimonials-container">
+      <div class="testimonials-scroll">
+        <!-- Testimonial 1 -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="t1.jpg" alt="Client 1">
+            <h3>John Doe</h3>
+            <p class="client-role">CEO, TechCorp</p>
+            <div class="testimonial-text">
+              <p>The team at Sam Studio exceeded our expectations. Brilliant work and communication.</p>
+            </div>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="t2.jpg" alt="Client 2">
+            <h3>Jane Smith</h3>
+            <p class="client-role">Marketing Director, BrandUp</p>
+            <div class="testimonial-text">
+              <p>Their creativity and strategy helped elevate our brand to new heights.</p>
+            </div>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="t3.jpg" alt="Client 3">
+            <h3>Rahul Verma</h3>
+            <p class="client-role">Founder, StartupX</p>
+            <div class="testimonial-text">
+              <p>Truly a fantastic team. We saw results almost immediately.</p>
+            </div>
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 4 -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="t1.jpg" alt="Client 4">
+            <h3>Emily Zhang</h3>
+            <p class="client-role">Creative Lead, DesignHub</p>
+            <div class="testimonial-text">
+              <p>Professional, punctual, and creative — highly recommended!</p>
+            </div>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 5 -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="t2.jpg" alt="Client 5">
+            <h3>Ali Khan</h3>
+            <p class="client-role">Product Manager, AppWorks</p>
+            <div class="testimonial-text">
+              <p>A pleasure to work with. Their design sense is on point.</p>
+            </div>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 6 -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="t3.jpg" alt="Client 6">
+            <h3>Sara Lopez</h3>
+            <p class="client-role">CMO, RetailPro</p>
+            <div class="testimonial-text">
+              <p>Helped us redefine our digital presence with class and confidence.</p>
+            </div>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+        <div class="contact-image">
+            <!-- Image will be set via background-image in CSS -->
+        </div>
+        <div class="contact-form">
+            <h2 class="contact-title">
+                <span>LET'S</span>
+                <span>CREATE</span>
+            </h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help you?</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+.services-section {
+  background: white;
+  padding: 6rem 2rem;
+  color: #111;
+  overflow: hidden;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+  perspective: 1000px;
+}
+
+/* Restored original header styles */
+.services-header {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.services-label,
+.services-number {
+  font-style: italic;
+  color: gray;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+}
+
+.services-label {
+  left: 0;
+}
+
+.services-number {
+  right: 0;
+}
+
+.services-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 10rem;
+  margin: 2rem 0 1rem;
+  text-transform: uppercase;
+}
+
+.services-subtext {
+  font-size: 3rem;
+  max-width: 722px;
+  line-height: 1.4;
+}
+
+/* Adjusted service blocks with proper spacing */
+.service-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  opacity: 0;
+  gap: 4rem; /* Added space between image and text */
+}
+
+.service-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image sizing adjustments */
+.service-image {
+  width: 48%;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.service-image img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Limit maximum height */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.service-text {
+  width: 48%;
+}
+
+/* Restored original text styles */
+.service-text h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.service-text ul {
+  list-style: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.service-text ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Animations (preserved from previous version) */
+.service-block {
+  animation: blockEntrance 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.service-block:nth-of-type(1) { animation-delay: 0.2s; }
+.service-block:nth-of-type(2) { animation-delay: 0.4s; }
+.service-block:nth-of-type(3) { animation-delay: 0.6s; }
+
+@keyframes blockEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) rotateX(-15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+/* Hover effects */
+.service-image {
+  transition: transform 0.6s ease;
+}
+
+.service-block:hover .service-image {
+  transform: translateY(-10px);
+}
+
+.service-image img {
+  transition: transform 0.8s ease;
+}
+
+.service-block:hover .service-image img {
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-block {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .service-image,
+  .service-text {
+    width: 100%;
+  }
+  
+  .services-title {
+    font-size: 6rem;
+  }
+  
+  .services-subtext {
+    font-size: 2rem;
+  }
+  
+  .service-text h3 {
+    font-size: 3.5rem;
+  }
+  
+  .service-text p {
+    font-size: 1.6rem;
+  }
+}
+    .testimonials-section {
+      background-color: #fff;
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials-header {
+      max-width: 800px;
+      margin: 0 auto 4rem auto;
+      position: relative;
+    }
+
+    .section-label {
+      position: absolute;
+      top: -3rem;
+      left: 0;
+      font-style: italic;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .section-number {
+      position: absolute;
+      top: -2rem;
+      right: 0;
+      font-style: italic;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .testimonials-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 10rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      color: #000;
+      line-height: 1.1;
+    }
+
+    .testimonials-subtext {
+      font-size: 1.8rem;
+      color: #444;
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Carousel Container */
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    /* Hide scrollbar */
+    .testimonials-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Testimonials Wrapper */
+    .testimonials-scroll {
+      display: flex;
+      width: max-content;
+      animation: auto-scroll 30s linear infinite;
+    }
+
+    /* Pause animation on hover/touch */
+    .testimonials-container:hover .testimonials-scroll,
+    .testimonials-container:active .testimonials-scroll {
+      animation-play-state: paused;
+    }
+
+    /* Testimonial Box */
+    .testimonial {
+      width: 100vw;
+      max-width: 800px;
+      padding: 0 20px;
+      box-sizing: border-box;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+
+    .testimonial-content {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid #f0f0f0;
+      margin: 0 auto;
+    }
+
+    .testimonial-content img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      border: 3px solid #f8f8f8;
+    }
+
+    .testimonial-content h3 {
+      font-size: 1.5rem;
+      margin: 0 0 5px;
+      color: #222;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .client-role {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .testimonial-text {
+      position: relative;
+    }
+
+    .testimonial-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+      margin: 0 auto;
+      font-style: italic;
+      max-width: 600px;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .testimonial-text p::before,
+    .testimonial-text p::after {
+      color: #ddd;
+      font-size: 2rem;
+      position: absolute;
+      line-height: 1;
+    }
+
+    .testimonial-text p::before {
+      content: "“";
+      left: -30px;
+      top: -10px;
+    }
+
+    .testimonial-text p::after {
+      content: "”";
+      right: -30px;
+      bottom: -20px;
+    }
+
+    .rating {
+      color: #ffc107;
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }
+
+    /* Auto-scroll animation */
+    @keyframes auto-scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100% + 100vw));
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .testimonials-title {
+        font-size: 5rem;
+      }
+      
+      .testimonials-subtext {
+        font-size: 1.4rem;
+      }
+      
+      .testimonial-content {
+        padding: 30px 20px;
+      }
+      
+      .testimonial-text p::before,
+      .testimonial-text p::after {
+        font-size: 1.5rem;
+      }
+      
+      .testimonial-text p::before {
+        left: -15px;
+      }
+      
+      .testimonial-text p::after {
+        right: -15px;
+      }
+    }
+
+    .contact-section {
+            background-color: #fff;
+            padding: 6rem 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .contact-image {
+            flex: 1;
+            min-height: 500px;
+            background-color: #f5f5f5; /* Placeholder for your image */
+            background-image: url('your-image.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        
+        .contact-title span {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #333;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-image {
+                min-height: 300px;
+                width: 100%;
+            }
+            
+            .contact-title {
+                font-size: 3.5rem;
+            }
+        }

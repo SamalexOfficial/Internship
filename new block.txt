@@ -1,3 +1,15 @@
+<!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="services-container">
+      <div class="services-header">
+        <div class="services-label">(What we do)</div>
+        <div class="services-number">(02)</div>
+        <h2 class="services-title">SERVICES</h2>
+        <p class="services-subtext">
+          Discover our tailored services designed to elevate your brand, enhance user experience.
+        </p>
+      </div>
+
 <!-- Service Block 1: Image Left, Text Right -->
       <div class="service-block fade-in-left">
         <div class="service-image">

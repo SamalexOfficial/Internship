@@ -1,0 +1,16 @@
+http://ncasuiux28.stepskochi.com
+
+*FTP Username:* student@ncasuiux28.stepskochi.com
+*FTP Password: *NcAS_UIUX28.St3PS
+*FTP server: *ftp.spectrum.in
+*FTP & explicit FTPS port:*  21
+
+
+
+
+OJT :
+
+http://ojtdev.stepskochi.com
+
+Nanda_T
+Nanda_T

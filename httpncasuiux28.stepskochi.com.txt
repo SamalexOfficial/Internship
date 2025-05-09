@@ -1,3 +1,19 @@
+Hi Nandakishore,
+
+Please find the *FTP credentials*:
+
+*URL:* http://sahrdayacollege.stepskochi.com/
+*FTP Username: *student@sahrdayacollege.stepskochi.com
+*FTP Password:* SaHr!D@ya.St3PS
+*FTP server:* ftp.spectrum.in
+*FTP & explicit FTPS port:*  21
+
+
+
+
+
+
+
 http://ncasuiux28.stepskochi.com
 
 *FTP Username:* student@ncasuiux28.stepskochi.com
